@@ -1,9 +1,19 @@
 import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import { Container } from 'react-bootstrap';
 
 const App = () => {
   return (
     <>
-      <h1>Welcome to eShopX</h1>
+      <Header />
+      <main className='py-3'>
+        <Container>
+          <HomePage />
+        </Container>
+      </main>
+      <Footer />
     </>
   );
 };
