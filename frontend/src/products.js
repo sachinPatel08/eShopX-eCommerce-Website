@@ -79,10 +79,10 @@ const products = [
   },
   {
     _id: '7',
-    name: 'DELL KB 216 Wired USB Desktop Keyboard',
+    name: 'Apple Magic Wireless Keyboard',
     image: '/images/keyboard.jpg',
     description:
-      'This is a compact full-size keyboard that features a number pad, and it is ideal for your home and workplace.',
+      'Magic Keyboard delivers a remarkably comfortable and precise typing experience It is also wireless and rechargeable, with an incredibly long-lasting internal battery that will power your keyboard for about a month or more between charges',
     brand: 'Dell',
     category: 'Electronics',
     price: 2199,
@@ -95,7 +95,7 @@ const products = [
     name: '12th Gen Intel® Core™ i7 DELL Inspiron 16',
     image: '/images/Laptop.jpg',
     description:
-      'This is a compact full-size keyboard that features a number pad, and it is ideal for your home and workplace.',
+      'Dell Inspiron 16 7610 Laptop Intel Core I7 -11800H Gaming Processor 16 Inches 3K 3072 X 1920 Qhd 16 Gb Ram 1Tb Ssd Nvidia 4Gb Rtx 3050 Gaming Graphics Windows 11+ Ms Office H&S 2021 2.1Kg.',
     brand: 'Dell',
     category: 'Electronics',
     price: 2199,
