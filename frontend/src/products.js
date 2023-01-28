@@ -77,6 +77,32 @@ const products = [
     rating: 4,
     numReviews: 12,
   },
+  {
+    _id: '7',
+    name: 'DELL KB 216 Wired USB Desktop Keyboard',
+    image: '/images/keyboard.jpg',
+    description:
+      'This is a compact full-size keyboard that features a number pad, and it is ideal for your home and workplace.',
+    brand: 'Dell',
+    category: 'Electronics',
+    price: 2199,
+    countInStock: 5,
+    rating: 4.5,
+    numReviews: 8,
+  },
+  {
+    _id: '8',
+    name: '12th Gen Intel® Core™ i7 DELL Inspiron 16',
+    image: '/images/Laptop.jpg',
+    description:
+      'This is a compact full-size keyboard that features a number pad, and it is ideal for your home and workplace.',
+    brand: 'Dell',
+    category: 'Electronics',
+    price: 2199,
+    countInStock: 5,
+    rating: 4.5,
+    numReviews: 8,
+  },
 ];
 
 export default products;
