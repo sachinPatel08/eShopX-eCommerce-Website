@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Rating from '../components/Rating';
 import products from '../products';
 import { Link } from 'react-router-dom';
 import { Row, Col, ListGroup, Card, Button, Image } from 'react-bootstrap';
 import { formatPrice } from '../utils/Helpers';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const ProductPage = ({ match }) => {
   const product = products.find((product) => product._id === match.params.id);
+
+  // AOS Initialization
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+    });
+  }, []);
 
   return (
     <>
@@ -19,9 +28,14 @@ const ProductPage = ({ match }) => {
       </Link>
       <Row>
         <Col md={6}>
-          <Image src={product.image} alt={product.name} fluid />
+          <Image
+            src={product.image}
+            alt={product.name}
+            fluid
+            data-aos='fade-right'
+          />
         </Col>
-        <Col md={3}>
+        <Col md={3} data-aos='fade-left'>
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h3>{product.name}</h3>
@@ -47,7 +61,7 @@ const ProductPage = ({ match }) => {
             </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={3}>
+        <Col md={3} data-aos='fade-left'>
           <Card>
             <ListGroup variant='flush'>
               <ListGroup.Item>

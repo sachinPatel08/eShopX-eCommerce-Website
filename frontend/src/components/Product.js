@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Rating from './Rating';
 import { Card } from 'react-bootstrap';
 import { formatPrice } from '../utils/Helpers';
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Product = ({ product }) => {
+  // AOS Initialization
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+    });
+  }, []);
   return (
-    <Card className='my-3 p-3 rounded'>
+    <Card className='my-3 p-3 rounded' data-aos='fade-up'>
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant='top' />
       </Link>
