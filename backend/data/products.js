@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'Airpods Wireless Bluetooth Headphones',
     image: '/images/airpods.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'iPhone 11 Pro 256GB Memory',
     image: '/images/phone.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Cannon EOS 80D DSLR Camera',
     image: '/images/camera.jpg',
     description:
@@ -39,20 +36,18 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
-    name: 'Sony Playstation 4 Pro White Version',
-    image: '/images/playstation.jpg',
+    name: 'APPLE Watch Series 8 GPS',
+    image: '/images/Watch.jpg',
     description:
-      'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
-    brand: 'Sony',
+      'Apple Watch is a wearable smartwatch that allows users to accomplish a variety of tasks, including making phone calls, sending text messages and reading email',
+    brand: 'Apple',
     category: 'Electronics',
-    price: 39999,
-    countInStock: 11,
-    rating: 5,
-    numReviews: 12,
+    price: 45900,
+    countInStock: 3,
+    rating: 4.9,
+    numReviews: 3,
   },
   {
-    _id: '5',
     name: 'Logitech G-Series Gaming Mouse',
     image: '/images/mouse.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'Amazon Echo Dot 3rd Generation',
     image: '/images/alexa.jpg',
     description:
@@ -78,7 +72,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '7',
     name: 'Apple Magic Wireless Keyboard',
     image: '/images/keyboard.jpg',
     description:
@@ -91,7 +84,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '8',
     name: '12th Gen Intel® Core™ i7 DELL Inspiron 16',
     image: '/images/Laptop.jpg',
     description:
@@ -103,6 +95,102 @@ const products = [
     rating: 4.5,
     numReviews: 8,
   },
+  {
+    name: 'MI Power Bank 3i 20000mAh',
+    image: '/images/Powerbank.jpg',
+    description:
+      'MI Power Bank 3i 20000mAh Lithium Polymer 18W Fast Power Delivery Charging | Input- Type C | Micro USB| Triple Output | Sandstone Black',
+    brand: 'MI',
+    category: 'Electronics',
+    price: 2099,
+    countInStock: 8,
+    rating: 3.8,
+    numReviews: 10,
+  },
+  {
+    name: 'Sony Playstation 4 Pro White Version',
+    image: '/images/playstation.jpg',
+    description:
+      'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
+    brand: 'Sony',
+    category: 'Electronics',
+    price: 39999,
+    countInStock: 11,
+    rating: 5,
+    numReviews: 12,
+  },
+  {
+    name: 'HP v236w USB 2.0 64GB Pen Drive, Metal',
+    image: '/images/Pendrive.jpg',
+    description:
+      'Durable metal Charming appearance which brings a great sense of style, Electronic plating after printing technic (Anti-fake). Other Features : Plug & Play',
+    brand: 'HP',
+    category: 'Electronics',
+    price: 745,
+    countInStock: 10,
+    rating: 4.0,
+    numReviews: 5,
+  },
+  {
+    name: 'Redmi 55 inches 4K Ultra HD Android LED TV',
+    image: '/images/TV.jpg',
+    description:
+      'Resolution: 4K Ultra HD (3840 x 2160) | Refresh Rate: 60Hz | 178 Degree Viewing angle.',
+    brand: 'MI',
+    category: 'Electronics',
+    price: 39999,
+    countInStock: 8,
+    rating: 4.1,
+    numReviews: 5,
+  },
+  {
+    name: 'DJI Mini 3 | 4K/60fps Video, 48MP Photo',
+    image: '/images/Drone.jpg',
+    description:
+      'Care-free Creation - Weighing less than 249 g, Mini 3 Pro does not require registration in most countries and regions. The foldable and compact design also makes it easy to carry on any adventure.',
+    brand: 'DJI',
+    category: 'Electronics',
+    price: 49999,
+    countInStock: 10,
+    rating: 4.0,
+    numReviews: 1,
+  },
+  {
+    name: 'Apple 2023 MacBook Pro Laptop M2 Pro chip',
+    image: '/images/MacBook.jpg',
+    description:
+      'SUPERCHARGED BY M2 PRO OR M2 MAX — Take on demanding projects with the M2 Pro or M2 Max chip. M2 Pro has up to 12 CPU cores, up to 19 GPU cores and up to 32GB unified memory.',
+    brand: 'Apple',
+    category: 'Electronics',
+    price: 251111,
+    countInStock: 1,
+    rating: 4.75,
+    numReviews: 2,
+  },
+  {
+    name: 'Samsung Galaxy S22 Ultra 5G',
+    image: '/images/S22.jpg',
+    description:
+      'The first Galaxy S with embedded S Pen. Write comfortably like pen on paper, turn quick notes into legible text and use Air Actions to control your phone remotely.',
+    brand: 'Sumsung',
+    category: 'Electronics',
+    price: 106999,
+    countInStock: 2,
+    rating: 4.1,
+    numReviews: 5,
+  },
+  {
+    name: 'boAt Airdopes 131 | Wireless Earbuds',
+    image: '/images/AirBuds.jpg',
+    description:
+      'Never lose a second with seamless Bluetooth 5.0 and Insta’ Wake n Pair, that connects your phone to your earbuds the moment they leave the charging case. Charge your tws bluetooth earphones with Type C for great speed.',
+    brand: 'Boat',
+    category: 'Electronics',
+    price: 1099,
+    countInStock: 1,
+    rating: 4.6,
+    numReviews: 5,
+  },
 ];
 
-module.exports = products;
+export default products;

@@ -3,18 +3,25 @@
   "version": "1.0.0",
   "description": "MERN Stack eCommerce Website",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
   "author": "DHRUTIK PATEL",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "express": "4.17",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.9.0",
     "nodemon": "^2.0.20"
   }
 }

@@ -21,7 +21,7 @@ const ProductPage = ({ match }) => {
 
     // AOS Initialization
     Aos.init({
-      duration: 1500,
+      duration: 1000,
     });
     // eslint-disable-next-line
   }, []);
