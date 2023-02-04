@@ -1,13 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import Product from '../components/Product';
-import products from '../products';
+import axios from 'axios';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 function HomePage() {
-  // AOS Initialization
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
+    // MAKE A REQUEST TO BACKEND
+    const fetchProducts = async () => {
+      const { data } = await axios.get('/api/products');
+
+      setProducts(data);
+    };
+    fetchProducts();
+
+    // AOS Initialization
     Aos.init({
       duration: 1500,
     });

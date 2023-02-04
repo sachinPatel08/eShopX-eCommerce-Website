@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Rating from '../components/Rating';
-import products from '../products';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Row, Col, ListGroup, Card, Button, Image } from 'react-bootstrap';
 import { formatPrice } from '../utils/Helpers';
@@ -8,13 +8,22 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const ProductPage = ({ match }) => {
-  const product = products.find((product) => product._id === match.params.id);
+  const [product, setProduct] = useState([]);
 
-  // AOS Initialization
   useEffect(() => {
+    // MAKE A REQUEST TO BACKEND
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${match.params.id}`);
+
+      setProduct(data);
+    };
+    fetchProduct();
+
+    // AOS Initialization
     Aos.init({
       duration: 1500,
     });
+    // eslint-disable-next-line
   }, []);
 
   return (
