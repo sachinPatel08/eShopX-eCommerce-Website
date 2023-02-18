@@ -6,6 +6,7 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { login } from "../actions/userActions";
 import FormContainer from "../components/FormContainer";
+
 const LoginPage = ({ location, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -35,7 +36,7 @@ const LoginPage = ({ location, history }) => {
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="email">
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label className="mt-2">Email Address</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email"
@@ -45,7 +46,7 @@ const LoginPage = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="mt-2">Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter password"

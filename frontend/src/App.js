@@ -8,6 +8,7 @@ import CartPage from "./pages/CartPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import { Container } from "react-bootstrap";
+import ProfilePage from './pages/ProfilePage'
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="/product/:id" component={ProductPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/register" component={RegisterPage} />
-
+          <Route path="/profile" component={ProfilePage} />
           <Route path="/cart/:id?" component={CartPage} />
         </Container>
       </main>

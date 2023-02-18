@@ -43,7 +43,7 @@ const RegisterPage = ({ location, history }) => {
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="name">
-            <Form.Label>Name</Form.Label>
+            <Form.Label className="mt-2">Name</Form.Label>
             <Form.Control
               type="name"
               placeholder="Enter name"
@@ -52,8 +52,8 @@ const RegisterPage = ({ location, history }) => {
             ></Form.Control>
           </Form.Group>
 
-          <Form.Group controlId="email">
-            <Form.Label>Email Address</Form.Label>
+          <Form.Group  controlId="email">
+            <Form.Label className="mt-2">Email Address</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email"
@@ -63,7 +63,7 @@ const RegisterPage = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="mt-2">Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter password"
@@ -73,7 +73,7 @@ const RegisterPage = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId="confirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
+            <Form.Label className="mt-2">Confirm Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Confirm password"
