@@ -29,4 +29,3 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
       return state;
   }
 };
-// if we can use reducer then default return state is most important
