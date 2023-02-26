@@ -8,8 +8,8 @@ import CartPage from "./pages/CartPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import { Container } from "react-bootstrap";
-import ProfilePage from './pages/ProfilePage'
-
+import ProfilePage from "./pages/ProfilePage";
+import ShippingPage from "./pages/ShippingPage";
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +19,7 @@ const App = () => {
           <Route path="/" component={HomePage} exact />
           <Route path="/product/:id" component={ProductPage} />
           <Route path="/login" component={LoginPage} />
+          <Route path="/shipping" component={ShippingPage} />
           <Route path="/register" component={RegisterPage} />
           <Route path="/profile" component={ProfilePage} />
           <Route path="/cart/:id?" component={CartPage} />

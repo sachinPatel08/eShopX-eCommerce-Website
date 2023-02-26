@@ -64,7 +64,7 @@ const ProfilePage = ({ location, history }) => {
           ) : (
             <Form onSubmit={submitHandler}>
               <Form.Group controlId="name">
-                <Form.Label>Name</Form.Label>
+                <Form.Label className="mt-3">Name</Form.Label>
                 <Form.Control
                   type="name"
                   placeholder="Enter name"
@@ -74,7 +74,7 @@ const ProfilePage = ({ location, history }) => {
               </Form.Group>
 
               <Form.Group controlId="email">
-                <Form.Label>Email Address</Form.Label>
+                <Form.Label className="mt-3">Email Address</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter email"
@@ -84,7 +84,7 @@ const ProfilePage = ({ location, history }) => {
               </Form.Group>
 
               <Form.Group controlId="password">
-                <Form.Label>Password</Form.Label>
+                <Form.Label className="mt-3">Password</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Enter password"
@@ -94,7 +94,7 @@ const ProfilePage = ({ location, history }) => {
               </Form.Group>
 
               <Form.Group controlId="confirmPassword">
-                <Form.Label>Confirm Password</Form.Label>
+                <Form.Label className="mt-3">Confirm Password</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Confirm password"
