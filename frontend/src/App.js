@@ -10,6 +10,8 @@ import RegisterPage from "./pages/RegisterPage";
 import { Container } from "react-bootstrap";
 import ProfilePage from "./pages/ProfilePage";
 import ShippingPage from "./pages/ShippingPage";
+import PaymentScreen from "./pages/PaymentScreen";
+import PlaceOrderScreen from "./pages/PlaceOrderScreen";
 const App = () => {
   return (
     <BrowserRouter>
@@ -20,7 +22,10 @@ const App = () => {
           <Route path="/product/:id" component={ProductPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/shipping" component={ShippingPage} />
+          <Route path="/payment" component={PaymentScreen} />
+          <Route path="/placeorder" component={PlaceOrderScreen} />
           <Route path="/register" component={RegisterPage} />
+
           <Route path="/profile" component={ProfilePage} />
           <Route path="/cart/:id?" component={CartPage} />
         </Container>
