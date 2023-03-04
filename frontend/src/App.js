@@ -13,7 +13,7 @@ import ShippingPage from "./pages/ShippingPage";
 import PaymentScreen from "./pages/PaymentScreen";
 import PlaceOrderScreen from "./pages/PlaceOrderScreen";
 import OrderPage from "./pages/OrderPage";
-import Error from "./components/Error";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/order/:id" component={OrderPage} />
           <Route path="/profile" component={ProfilePage} />
           <Route path="/cart/:id?" component={CartPage} />
-          <Route path="*" component={Error} />
+         
         </Container>
       </main>
       <Footer />
