@@ -30,7 +30,6 @@ const App = () => {
           <Route path="/order/:id" component={OrderPage} />
           <Route path="/profile" component={ProfilePage} />
           <Route path="/cart/:id?" component={CartPage} />
-         
         </Container>
       </main>
       <Footer />
