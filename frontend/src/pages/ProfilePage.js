@@ -134,18 +134,17 @@ const ProfilePage = ({ location, history }) => {
                 <th>PAID</th>
                 <th>DELIVERED</th>
                 <th></th>
-                <th></th>
               </tr>
             </thead>
             <tbody>
               {orders.map((order) => (
                 <tr key={order._id}>
                   <td>{order._id}</td>
-                  <td>{  order.createdAt && order.createdAt.substr(0,10)}</td>
+                  <td>{  order.createdAt.substr(0,10)}</td>
                   <td>{formatPrice(order.totalPrice)}</td>
                   <td>
                     {order.isPaid ? (
-                    order.paidAt && order.paidAt.substr(0,10)
+                   order.paidAt.substr(0,10)
                     ) : (
                       <i className='fas fa-times' style={{ color: 'red' }}></i>
                     )}
@@ -163,22 +162,6 @@ const ProfilePage = ({ location, history }) => {
                         Details
                       </Button>
                     </LinkContainer>
-                  </td>
-                  <td>
-                    
-                      {
-                        !order.isPaid ? (
-                          <Button  className='btn-sm' variant='light'>
-                        Cancel
-                      </Button>
-                      
-                        ): order.isPaid && !order.isDelivered ? (<Button className='btn-sm' variant='light'>
-                        pending
-                      </Button>):<Button className='btn-sm' variant='light'>
-                        DELIVERED
-                      </Button>
-                      }
-                   
                   </td>
                 </tr>
               ))}

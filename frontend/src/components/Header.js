@@ -34,7 +34,7 @@ const Header = () => {
                   style={{ color: "#fff", fontSize: "16px", fontWeight: "600" }}
                 >
                   <i
-                    class="fa-solid fa-cart-shopping"
+                    className="fa-solid fa-cart-shopping"
                     style={{ marginRight: "10px" }}
                   ></i>
                   Cart
@@ -59,7 +59,7 @@ const Header = () => {
                     }}
                   >
                     <i
-                      class="fa-solid fa-user"
+                      className="fa-solid fa-user"
                       style={{ marginRight: "10px" }}
                     ></i>
                     Sign In
