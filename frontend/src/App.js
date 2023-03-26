@@ -14,6 +14,7 @@ import PaymentScreen from "./pages/PaymentScreen";
 import PlaceOrderScreen from "./pages/PlaceOrderScreen";
 import OrderPage from "./pages/OrderPage";
 import UserListPage from "./pages/UserListPage";
+import EditUserPage from "./pages/EditUserPage"
 const App = () => {
   return (
     <BrowserRouter>
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/profile" component={ProfilePage} />
           <Route path="/cart/:id?" component={CartPage} />
           <Route path="/admin/userlist" component={UserListPage} />
+          <Route path='/admin/user/:id/edit' component={EditUserPage} />
         </Container>
       </main>
       <Footer />
