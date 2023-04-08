@@ -13,6 +13,11 @@ import ShippingPage from "./pages/ShippingPage";
 import PaymentScreen from "./pages/PaymentScreen";
 import PlaceOrderScreen from "./pages/PlaceOrderScreen";
 import OrderPage from "./pages/OrderPage";
+import UserListPage from "./pages/UserListPage";
+import EditUserPage from "./pages/EditUserPage";
+import ProductListPage from "./pages/ProductListPage";
+import EditProductPage from "./pages/EditProductPage";
+import OrderListPage from "./pages/OrderListPage";
 
 const App = () => {
   return (
@@ -30,6 +35,18 @@ const App = () => {
           <Route path="/order/:id" component={OrderPage} />
           <Route path="/profile" component={ProfilePage} />
           <Route path="/cart/:id?" component={CartPage} />
+          <Route path="/admin/userlist" component={UserListPage} />
+          <Route path="/admin/user/:id/edit" component={EditUserPage} />
+
+          <Route path="/admin/productlist" component={ProductListPage} exact />
+          {/* <Route
+            path='/admin/productlist/:pageNumber'
+            component={ProductListPage}
+            exact
+            
+          /> */}
+          <Route path="/admin/product/:id/edit" component={EditProductPage} />
+          <Route path="/admin/orderlist" component={OrderListPage} />
         </Container>
       </main>
       <Footer />
