@@ -18,7 +18,7 @@ import EditUserPage from "./pages/EditUserPage";
 import ProductListPage from "./pages/ProductListPage";
 import EditProductPage from "./pages/EditProductPage";
 import OrderListPage from "./pages/OrderListPage";
-
+import Searchbar from "./components/Searchbar";
 const App = () => {
   return (
     <BrowserRouter>
@@ -45,6 +45,7 @@ const App = () => {
             exact
             
           /> */}
+          <Route path='/search/:keyword' component={HomePage} exact />
           <Route path="/admin/product/:id/edit" component={EditProductPage} />
           <Route path="/admin/orderlist" component={OrderListPage} />
         </Container>

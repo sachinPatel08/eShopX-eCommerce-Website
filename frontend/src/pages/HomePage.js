@@ -8,18 +8,20 @@ import { listProducts } from "../actions/productActions";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-function HomePage() {
+function HomePage({match}) {
+  const keyword = match.params.keyword
+
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
   useEffect(() => {
-    dispatch(listProducts());
+    dispatch(listProducts(keyword));
 
     // AOS Initialization
     Aos.init({
       duration: 1000,
     });
-  }, [dispatch]);
+  }, [dispatch , keyword]);
 
   return (
     <>
@@ -35,6 +37,9 @@ function HomePage() {
         <h1 className="text-center" data-aos="fade-up">
         Latest Products
       </h1>
+      {
+        products.length === 0 ?(<h2>Products not found..</h2>):""
+      }
         <Row>
           {products.map((product) => {
             return (
