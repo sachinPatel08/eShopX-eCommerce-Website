@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### sample credit card for payment ###
+Card Type: Visa
+Card Number: 4032035763143070
+Expiration Date: 04/2024
+CVV: 133
+
+//UK
+city:Hillingdon
+postcode:UB10 0DH
+mobile no:07700 900000
