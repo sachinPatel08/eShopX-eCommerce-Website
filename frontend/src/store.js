@@ -31,7 +31,7 @@ import {
 
 const reducer = combineReducers({
   productList: productListReducer,
-  productDetail: productDetailsReducer,
+  productDetails: productDetailsReducer,
   cart: cartReducer,
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,

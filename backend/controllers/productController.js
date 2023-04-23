@@ -5,6 +5,9 @@ import Product from "../models/productModel.js";
 //@route    /api/products
 //@access   Public
 const getProducts = expressAsyncHandler(async (request, response) => {
+  const pageSize = 8
+  const page = Number(request.query.pageNumber) || 1
+
   const keyword = request.query.keyword
     ? {
         name: {
@@ -13,10 +16,12 @@ const getProducts = expressAsyncHandler(async (request, response) => {
         },
       }
     : {};
-  const products = await Product.find({ ...keyword });
-  // response.status(401)
-  // throw new Error("Not Authorized")
-  response.json(products);
+    const count = await Product.countDocuments({ ...keyword })
+    const products = await Product.find({ ...keyword })
+      .limit(pageSize)
+      .skip(pageSize * (page - 1))
+  
+    response.json({ products, page, pages: Math.ceil(count / pageSize) })
 });
 
 //@desc     FETCH SINGLE PRODUCTS

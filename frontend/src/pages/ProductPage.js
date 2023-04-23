@@ -25,7 +25,7 @@ import { PRODUCT_CREATE_REVIEW_RESET } from "../constants/productConstants";
 
 const ProductPage = ({ history, match }) => {
   const dispatch = useDispatch();
-  const productDetails = useSelector((state) => state.productDetail);
+  const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
   const [qty, setQty] = useState(1);
