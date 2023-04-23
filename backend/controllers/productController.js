@@ -5,16 +5,15 @@ import Product from "../models/productModel.js";
 //@route    /api/products
 //@access   Public
 const getProducts = expressAsyncHandler(async (request, response) => {
-
   const keyword = request.query.keyword
-  ? {
-      name: {
-        $regex: request.query.keyword,
-        $options: 'i',
-      },
-    }
-  : {}
-  const products = await Product.find({...keyword});
+    ? {
+        name: {
+          $regex: request.query.keyword,
+          $options: "i",
+        },
+      }
+    : {};
+  const products = await Product.find({ ...keyword });
   // response.status(401)
   // throw new Error("Not Authorized")
   response.json(products);
@@ -100,18 +99,18 @@ const updateProduct = expressAsyncHandler(async (req, res) => {
 // @route   POST /api/products/:id/reviews
 // @access  Private
 const createProductReview = expressAsyncHandler(async (req, res) => {
-  const { rating, comment } = req.body
+  const { rating, comment } = req.body;
 
-  const product = await Product.findById(req.params.id)
+  const product = await Product.findById(req.params.id);
 
   if (product) {
     const alreadyReviewed = product.reviews.find(
       (r) => r.user.toString() === req.user._id.toString()
-    )
+    );
 
     if (alreadyReviewed) {
-      res.status(400)
-      throw new Error('Product already reviewed')
+      res.status(400);
+      throw new Error("Product already reviewed");
     }
 
     const review = {
@@ -119,24 +118,32 @@ const createProductReview = expressAsyncHandler(async (req, res) => {
       rating: Number(rating),
       comment,
       user: req.user._id,
-    }
+    };
 
-    product.reviews.push(review)
+    product.reviews.push(review);
 
-    product.numReviews = product.reviews.length
+    product.numReviews = product.reviews.length;
 
     product.rating =
       product.reviews.reduce((acc, item) => item.rating + acc, 0) /
-      product.reviews.length
+      product.reviews.length;
 
-    await product.save()
-    res.status(201).json({ message: 'Review added' })
+    await product.save();
+    res.status(201).json({ message: "Review added" });
   } else {
-    res.status(404)
-    throw new Error('Product not found')
+    res.status(404);
+    throw new Error("Product not found");
   }
-})
+});
 
+// @desc    Get top rated products
+// @route   GET /api/products/top
+// @access  Public
+const getTopProducts = expressAsyncHandler(async (req, res) => {
+  const products = await Product.find({});
+
+  res.json(products);
+});
 
 export {
   getProducts,
@@ -144,5 +151,6 @@ export {
   deleteProduct,
   createProduct,
   updateProduct,
-  createProductReview
+  createProductReview,
+  getTopProducts,
 };
