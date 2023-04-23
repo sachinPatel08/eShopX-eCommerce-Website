@@ -10,6 +10,7 @@ import { getUserDetails, updateUserProfile } from "../actions/userActions";
 import FormContainer from "../components/FormContainer";
 import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstant";
 import {listMyOrders } from '../actions/orderAction'
+import Meta from "../components/Meta";
 
 const ProfilePage = ({ location, history }) => {
   const [name, setName] = useState("");
@@ -61,6 +62,7 @@ const ProfilePage = ({ location, history }) => {
   
   return (
     <>
+    <Meta title="Profile"/>
       <Row>
         <Col md={3}>
           <h2>User Profile</h2>

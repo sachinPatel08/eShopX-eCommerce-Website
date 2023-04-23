@@ -10,6 +10,7 @@ import {
   Button,
   Card,
 } from "react-bootstrap";
+import Meta from "../components/Meta";
 import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartAction";
 import { formatPrice } from "../utils/Helpers";
@@ -33,6 +34,7 @@ const CartPage = ({ match, location, history }) => {
   };
   return (
     <>
+    <Meta title="Cart"/>
       <Row>
         <Col md={8}>
           <h1>Shopping Cart</h1>

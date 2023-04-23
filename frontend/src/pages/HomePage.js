@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row, TabContent } from "react-bootstrap";
+import {Helmet} from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import Product from "../components/Product";
 import Message from "../components/Message";
@@ -8,6 +9,7 @@ import ProductCarousel from "../components/ProductCarousel";
 import { listProducts } from "../actions/productActions";
 import { Link } from "react-router-dom";
 import Aos from "aos";
+import Meta from "../components/Meta";
 import "aos/dist/aos.css";
 
 function HomePage({ match }) {
@@ -27,6 +29,7 @@ function HomePage({ match }) {
 
   return (
     <>
+    <Meta/>
       {!keyword ? (
         <ProductCarousel />
       ) : (
