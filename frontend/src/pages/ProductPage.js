@@ -264,6 +264,7 @@ const ProductPage = ({ history, match }) => {
                         ></Form.Control>
                       </Form.Group>
                       <Button
+                      style={{"marginTop":"10px"}}
                         disabled={loadingProductReview}
                         type="submit"
                         variant="primary"

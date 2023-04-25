@@ -13,7 +13,7 @@ import {listMyOrders } from '../actions/orderAction'
 import Meta from "../components/Meta";
 
 const ProfilePage = ({ location, history }) => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState("test");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");

@@ -49,18 +49,18 @@ const OrderListPage = ({ history }) => {
               <tr key={order._id}>
                 <td>{order._id}</td>
                 <td>{order?.user && order.user?.name}</td>
-                <td>{order.createdAt.substring(0, 10)}</td>
+                <td>{order.createdAt}</td>
                 <td>{formatPrice(order.totalPrice)}</td>
                 <td>
                   {order.isPaid ? (
-                    order.paidAt.substring(0, 10)
+                    order.paidAt
                   ) : (
                     <i className="fas fa-times" style={{ color: "red" }}></i>
                   )}
                 </td>
                 <td>
                   {order.isDelivered ? (
-                    order.deliveredAt.substring(0, 10)
+                    order.deliveredAt
                   ) : (
                     <i className="fas fa-times" style={{ color: "red" }}></i>
                   )}
