@@ -6,7 +6,7 @@ import { formatPrice } from "../utils/Helpers";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { listOrders } from "../actions/orderAction";
-
+import Meta from '../components/Meta'
 const OrderListPage = ({ history }) => {
   const dispatch = useDispatch();
 
@@ -26,6 +26,7 @@ const OrderListPage = ({ history }) => {
 
   return (
     <>
+    <Meta title="Admin|Orders"/>
       <h1>Orders</h1>
       {loading ? (
         <Loader />

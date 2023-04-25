@@ -82,7 +82,7 @@ const ProductPage = ({ history, match }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-         <Meta title={product.name} />
+          <Meta title={product.name} />
           <Row>
             <Col md={6}>
               <Image
@@ -264,7 +264,7 @@ const ProductPage = ({ history, match }) => {
                         ></Form.Control>
                       </Form.Group>
                       <Button
-                      style={{"marginTop":"10px"}}
+                        style={{ marginTop: "10px" }}
                         disabled={loadingProductReview}
                         type="submit"
                         variant="primary"

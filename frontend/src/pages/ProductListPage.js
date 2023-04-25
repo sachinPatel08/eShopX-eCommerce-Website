@@ -6,6 +6,7 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import Paginate from "../components/Paginate.js";
 import { formatPrice } from '../utils/Helpers';
+import Meta from '../components/Meta'
 import {
   listProducts,
   deleteProduct,
@@ -73,6 +74,7 @@ const ProductListPage = ({ history, match }) => {
 
   return (
     <>
+    <Meta title="Admin|Products"/>
       <Row className="align-items-center">
         <Col>
           <h1>Products</h1>
